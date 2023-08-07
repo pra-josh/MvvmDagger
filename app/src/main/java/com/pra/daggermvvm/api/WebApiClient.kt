@@ -21,7 +21,7 @@ class WebApiClient(private val context: Context) {
         val logging = HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BODY)
         val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(logging).build()
-        client.connectTimeoutMillis
+      //  client.connectTimeoutMillis
 
         val retrofit =
             Retrofit.Builder().baseUrl(Constants.BaseUrl).addConverterFactory(GsonConverterFactory.create())
