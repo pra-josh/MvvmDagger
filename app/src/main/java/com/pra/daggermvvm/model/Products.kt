@@ -2,11 +2,16 @@
 
 package com.pra.daggermvvm.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Products (
     val image: String,
     val price: Double,
     val description: String,
-    val id: Long,
+    @PrimaryKey(autoGenerate = false)
+    val id: Int,
     val title: String,
     val category: String
 )

@@ -20,7 +20,6 @@ class UserApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponennt = DaggerAppComponent.builder().build()
-
+        appComponennt = DaggerAppComponent.factory().create(this)
     }
 }
